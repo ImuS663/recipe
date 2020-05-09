@@ -1,0 +1,8 @@
+<div>
+  <h3>
+    <a routerLink="/recipe" [queryParams]="{'id':recipeItem.idMeal}">{{recipeItem.strMeal}}</a>
+  </h3>
+  <div class="img-box-shadow">
+    <img src="{{recipeItem.strMealThumb}}" alt="">
+  </div>
+</div>
