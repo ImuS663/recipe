@@ -1,0 +1,10 @@
+<div id="header">
+  <div id="logo">
+    <a routerLink="">
+      <h1>LogoRecipeApp</h1>
+    </a>
+  </div>
+  <div id="search">
+    <input #searchName type="search" (keyup.enter)="search(searchName.value)">
+  </div>
+</div>

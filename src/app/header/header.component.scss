@@ -1,0 +1,16 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin: auto;
+  max-width: 75rem;
+
+  div#logo {
+    margin-left: .3rem;
+  }
+
+  div#search {
+    margin: auto 0;
+    margin-right: .3rem;
+  }
+}
