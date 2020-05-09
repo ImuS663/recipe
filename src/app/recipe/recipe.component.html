@@ -4,8 +4,8 @@
   </div>
   <div class="recipe">
     <h2>{{recipe.strMeal}}</h2>
-    <p><b>Category</b>: <a routerLink='/recipe-list' [queryParams]="{'c':recipe.strCategory}">{{recipe.strCategory}}</a></p>
-    <p><b>Area</b>: <a>{{recipe.strArea}}</a></p>
+    <p><b>Category</b>: <a routerLink="/recipe-list" [queryParams]="{'c':recipe.strCategory}">{{recipe.strCategory}}</a></p>
+    <p><b>Area</b>: <a routerLink="/recipe-list" [queryParams]="{'a':recipe.strArea}">{{recipe.strArea}}</a></p>
     <div class="ingredients">
       <h3>Ingredients:</h3>
       <ol>
