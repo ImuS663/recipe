@@ -1,0 +1,13 @@
+{
+  "url": {
+    "search": "https://www.themealdb.com/api/json/v1/1/search.php",
+    "lookup": "https://www.themealdb.com/api/json/v1/1/lookup.php",
+    "random": "https://www.themealdb.com/api/json/v1/1/random.php",
+    "categories": "https://www.themealdb.com/api/json/v1/1/categories.php",
+    "list": "https://www.themealdb.com/api/json/v1/1/list.php",
+    "filter": "https://www.themealdb.com/api/json/v1/1/filter.php"
+  },
+  "headers": {
+    "Content-Type": "application/json"
+  }
+}
