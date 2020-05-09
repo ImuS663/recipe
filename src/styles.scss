@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+
+$primary: #f4f4f4;
+$secondary: #232020;
+$lite-secondary: #3a3535;
+$accent: #ff7315;
+$font: 'M PLUS Rounded 1c', sans-serif;
+
+
+body {
+  font-family: $font;
+  background-color: $primary;
+  margin: 0;
+
+  header {
+    background-color: $secondary;
+  }
+
+  input {
+    font-family: $font;
+    background-color: $primary;
+    border: none;
+    border-radius: .1rem;
+    width: 12rem;
+    padding: .2rem;
+    color: $secondary;
+    font-size: .8rem;
+  }
+
+  button {
+    font-family: $font;
+  }
+
+  h1 {
+    color: $accent;
+  }
+
+  a {
+    text-decoration: none;
+    color: $accent;
+  }
+
+  div.img-box-shadow {
+    display: flex;
+    margin: 1.5rem;
+    box-shadow: inset 0 0 .6rem .6rem $primary;
+    width: 30rem;
+    border: none;
+
+    img {
+      position: relative;
+      width: 29.9rem;
+      z-index: -1;
+      border: none;
+    }
+  }
+}
