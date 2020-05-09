@@ -1,0 +1,14 @@
+div.head-recipe {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: .6rem;
+
+  div.recipe {
+    height: 100%;
+  }
+}
+
+div.instructions {
+  margin: 1rem 3rem;
+}
