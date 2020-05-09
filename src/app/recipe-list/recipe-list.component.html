@@ -1,0 +1,6 @@
+<div class="not-found" *ngIf="recipeList === null">
+  <h1>Unfortunately, no matches were found for your query.</h1>
+</div>
+<div class="list">
+  <app-recipe-item *ngFor="let item of recipeList" [recipeItem]="item"></app-recipe-item>
+</div>
