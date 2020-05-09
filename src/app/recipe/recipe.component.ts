@@ -26,7 +26,10 @@ export class RecipeComponent implements OnInit {
   ngOnInit(): void {
     this.http.getMealById(this.id).subscribe(data => this.recipe = data[0]);
   }
-
+  /**
+   * Checking item for null and empty string.
+   * @param item checked string.
+   */
   private filterItem(item: string): boolean {
     if (item !== null && item !== '') {
       return true;
@@ -34,7 +37,11 @@ export class RecipeComponent implements OnInit {
       return false;
     }
   }
-
+  /**
+   * Checking item1 and item2 for null and empty string.
+   * @param item1 checked string.
+   * @param item2 checked string.
+   */
   filterItems(item1: string, item2: string): boolean {
     if (this.filterItem(item1) && this.filterItem(item2)) {
       return true;
@@ -42,5 +49,4 @@ export class RecipeComponent implements OnInit {
       return false;
     }
   }
-
 }

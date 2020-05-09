@@ -44,20 +44,27 @@ export class RecipeListComponent implements OnInit, DoCheck {
       this.filterArea();
     }
   }
-
+  /**
+   * Load recipes by name and prevents looping.
+   */
   private search(): void {
     if (this.searchNameBack !== this.searchName) {
       this.searchName = this.searchNameBack;
       this.http.search(this.searchName).subscribe(data => this.recipeList = data);
     }
   }
-
+  /**
+   * Load recipes by category and prevents looping.
+   */
   private filterCategory(): void {
     if (this.categoryBack !== this.category) {
       this.category = this.categoryBack;
       this.http.filteringByFilterCategory(this.category).subscribe(data => this.recipeList = data);
     }
   }
+  /**
+   * Load recipes by area and prevents looping.
+   */
   private filterArea(): void {
     if (this.areaBack !== this.area) {
       this.area = this.areaBack;
