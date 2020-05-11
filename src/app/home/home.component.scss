@@ -1,0 +1,17 @@
+h2 {
+  text-align: center;
+}
+div {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  a {
+    margin: 0 1rem;
+
+    h3 {
+      margin: .2rem 0;
+    }
+  }
+}

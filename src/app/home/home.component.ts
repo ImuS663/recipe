@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
-import { Meal } from '../meal';
 import { MealLight } from '../meal-light';
+import { Category } from '../category';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,17 @@ import { MealLight } from '../meal-light';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private http: HttpService) { }
+  recipeArr: MealLight[] = [];
+  recipeCategory: Category[] = [];
+  recipeArea: any[] = [];
+
+  constructor(private http: HttpService) {
+    for (let i = 0; i < 4; i++) {
+      http.getRandomMeal().subscribe(data => this.recipeArr.push(data[0]));
+    }
+    http.getAllCategory().subscribe(data => this.recipeCategory = data);
+    http.getAreaList().subscribe(data => this.recipeArea = data);
+  }
 
   ngOnInit(): void {}
 

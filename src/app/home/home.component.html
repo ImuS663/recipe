@@ -1,2 +1,14 @@
-<p>home works!</p>
-<a routerLink="/recipe" [queryParams]="{'id':'52772'}">recipe</a>
+<h2>Category</h2>
+<div>
+  <a *ngFor="let category of recipeCategory" routerLink="/recipe-list" [queryParams]="{'c':category.strCategory}"><h3>{{category.strCategory}}</h3></a>
+</div>
+<hr>
+<h2>Area</h2>
+<div>
+  <a *ngFor="let area of recipeArea" routerLink="/recipe-list" [queryParams]="{'a':area.strArea}"><h3>{{area.strArea}}</h3></a>
+</div>
+<hr>
+<h2>Random Recipe</h2>
+<div>
+  <app-recipe-item *ngFor="let item of recipeArr" [recipeItem]="item"></app-recipe-item>
+</div>
