@@ -86,8 +86,14 @@ export class HttpService {
   /**
    * Get random recipe.
    */
-  getRandomMeal() {
+  getRandomMeal(): Observable<Meal[]> {
     return this.getData(url.random);
   }
 
+  /**
+   * Get List Area.
+   */
+  getAreaList(): any {
+    return this.getData(url.list, {a: 'list'});
+  }
 }
