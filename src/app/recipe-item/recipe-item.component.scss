@@ -1,17 +1,32 @@
 $margin-h3: 1rem;
+$shadow: 8px;
 
-div {
+div.item {
   display: flex;
   align-items: center;
   flex-direction: column;
   max-width: 20rem;
   height: 100%;
   justify-content: space-between;
+  border-radius: 1rem;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 $shadow $shadow #ff731577;
+  }
 
   h3 {
+    display: flex;
     text-align: center;
     margin-left: $margin-h3;
     margin-right: $margin-h3;
+    height: 100%;
+    align-items: center;
+
+    a {
+      margin: auto;
+    }
   }
 
 }
